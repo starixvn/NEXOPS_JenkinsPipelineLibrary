@@ -4,13 +4,10 @@
 	<li>restoreNuget() : Restore nuget packages.</li>
 	<li>msBuild(String solutionName) : Call MsBuild to build the solution.</li>
 	<li>generateCoverageForNetCore() : Generate C# coverage report for .Net Core projects</li>
-	<li>
-		<p>
-			beginSonarQubeForMsBuild(String key, String name, String additionalParams) : Prepare SonarQube environment<br/>
-			+ additionalParams : configure the additional Params such as:<br/>
-				/d:sonar.cs.opencover.reportsPaths="${WORKSPACE}\coverage.xml"
-				/d:sonar.cs.xunit.reportsPaths="${WORKSPACE}\UnitTest.xml"
-				...
-		</p>
+	<li>beginSonarQubeForMsBuild(String key, String name, String additionalParams) : Prepare SonarQube environment
+		<ul type="none">
+			<li>- additionalParams : configure the additional Params such as: /d:sonar.cs.opencover.reportsPaths="${WORKSPACE}\coverage.xml" /d:sonar.cs.xunit.reportsPaths="${WORKSPACE}\UnitTest.xml" ...
+			</li>
+		</ul>
 	</li>
 </ul>
