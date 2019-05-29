@@ -2,4 +2,5 @@
 
 <ul>
 	<li>restoreNuget() : Restore nuget packages.</li>
+	<li>msBuild(String solutionName) : Call MsBuild to build the solution.</li>
 </ul>
