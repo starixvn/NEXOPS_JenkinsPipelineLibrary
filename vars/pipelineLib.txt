@@ -1,3 +1,5 @@
-Standard library for Jenkins Pipeline
+<strong>Standard library for Jenkins Pipeline</strong>
 
-	* restoreNuget() : Restore nuget packages.
+<ul>
+	<li>restoreNuget() : Restore nuget packages.</li>
+</ul>
