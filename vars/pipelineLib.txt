@@ -4,4 +4,5 @@
 	<li>restoreNuget() : Restore nuget packages.</li>
 	<li>msBuild(String solutionName) : Call MsBuild to build the solution.</li>
 	<li>generateCoverageForNetCore() : Generate C# coverage report for .Net Core projects</li>
+	<li>beginSonarQubeForMsBuild(String key,String name,String additionalParams) : Prepare SonarQube environment</li>
 </ul>
