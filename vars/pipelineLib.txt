@@ -1,14 +1,14 @@
 <strong>Standard library for Jenkins Pipeline</strong>
 
 <ul>
-	<li>restoreNuget() : Restore nuget packages.</li>
-	<li>msBuild(String solutionName) : Call MsBuild to build the solution.</li>
-	<li>xUnitForNetCore() : Generate C# coverage report for .Net Core projects using xUnit testing framework.</li>
-	<li>beginSonarQubeForMsBuild(String key, String name, String additionalParams) : Prepare SonarQube environment
+	<li><strong>restoreNuget()</strong> : Restore nuget packages.</li>
+	<li><strong>msBuild(String solutionName)</strong> : Call MsBuild to build the solution.</li>
+	<li><strong>xUnitForNetCore()</strong> : Generate C# coverage report for .Net Core projects using xUnit testing framework.</li>
+	<li><strong>beginSonarQubeForMsBuild(String key, String name, String additionalParams)</strong> : Prepare SonarQube environment
 		<ul>
 			<li>additionalParams : configure the additional Params such as: /d:sonar.cs.opencover.reportsPaths="${WORKSPACE}\coverage.xml" /d:sonar.cs.xunit.reportsPaths="${WORKSPACE}\UnitTest.xml" ...
 			</li>
 		</ul>
 	</li>
-	<li>endSonarQubeForMsBuild() : Run SonarQube Analysis</li>
+	<li><strong>endSonarQubeForMsBuild()</strong> : Run SonarQube Analysis</li>
 </ul>
