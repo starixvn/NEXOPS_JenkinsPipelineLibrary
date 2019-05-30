@@ -17,3 +17,7 @@ def beginSonarQubeForMsBuild(String key, String name, String additionalParams){
 def endSonarQubeForMsBuild(){
 	bat label: "Run SonarQube Analysis", script: "\"${tool 'SonarScanner for MSBuild'}\\MSBuild.SonarQube.Runner.exe\" end"
 }
+
+def deployByRocketor(String locationIds, String branchName, String commitHash, String redmineIds, String userToken){
+	bat label: "Rocketor Deployment", script: "\"%JENKINS_HOME%\\tools\\RocketorPublish\\Fanex.Rocketor.Publish.exe\" --locationids=\"${locationIds}\" --branchname=\"${branchName}\" --commithash=${commitHash} --redmineids=\"${redmineIds}\" --token=${userToken} --workspace=\"%WORKSPACE%\""
+}
