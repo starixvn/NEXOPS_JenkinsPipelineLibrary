@@ -10,7 +10,7 @@ def xUnitForNetCore(){
 	bat label: "Generate C# Coverage", script: "powershell -file \"%JENKINS_HOME%\\tools\\Commands\\NetCoreCoverage.ps1\" \"%WORKSPACE%\""
 }
 
-def xUnitForNetFramework{
+def xUnitForNetFramework(){
 	bat label: "Generate C# Coverage", script: "powershell -file \"%JENKINS_HOME%\\tools\\Commands\\xUnitCodeCoverage.ps1\" \"%WORKSPACE%\""
 }
 
@@ -24,4 +24,12 @@ def endSonarQubeForMsBuild(){
 
 def deployByRocketor(String locationIds, String branchName, String commitHash, String redmineIds, String userToken){
 	bat label: "Rocketor Deployment", script: "\"%JENKINS_HOME%\\tools\\RocketorPublish\\Fanex.Rocketor.Publish.exe\" --locationids=\"${locationIds}\" --branchname=\"${branchName}\" --commithash=${commitHash} --redmineids=\"${redmineIds}\" --token=${userToken} --workspace=\"%WORKSPACE%\""
+}
+
+def tsqlCoverage(String dataSource,String database){
+	bat label: "TSQL Coverage", script: "powershell -file \"%JENKINS_HOME%\\tools\\Commands\\SQLCoverage.ps1\" \"%WORKSPACE%\" \"${dataSource}\" \"${database}\""
+}
+
+def generateSonarQubeReport(String key){
+	bat label:"SonarQube Report", script: "\"%JENKINS_HOME%\\tools\\SonarQube.ReportGenerator\\Fanex.SonarQube.ReportGenerator.exe\" --projectkey=${key} --workspace=\"%WORKSPACE%\""
 }

@@ -21,4 +21,6 @@
 			<li>userToken: it is optional if use Jenkins User Build authorization otherwise required if use User Token authorization.</li>
 		</ul>
 	</li>
+	<li><strong>tsqlCoverage(String dataSource,String database)</strong> : Generate TSQL coverage report for a SQL database.</li>
+	<li><strong>generateSonarQubeReport(String key)</strong> : Generate SonarQube report.</li>
 </ul>
