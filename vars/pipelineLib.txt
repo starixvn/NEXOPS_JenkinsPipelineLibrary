@@ -16,7 +16,7 @@
 		<ul>
 			<li>locationIds: (required) - the location id(s) in Rocketor for deployment. You can input multiple values separated by comma.</li>	
 			<li>branchName: (required) - the branch name for deployment. %GIT_BRANCH% will get the build branch so there is no change needed.</li>
-			<li>commitHash: (required) - the commit hash for deployment. %GIT_COMMIT% will get the latest build commit hash so there is no change needed.</li>			
+			<li>commitHash: (optional) - the commit hash for deployment. %GIT_COMMIT% will get the latest build commit hash. If empty, it will deploy at latest commit of the branch.</li>
 			<li>redmineIds: (optional) - the Redmine feature id(s) for SP version change. You can input multiple values separated by comma.</li>
 			<li>userToken: it is optional if use Jenkins User Build authorization otherwise required if use User Token authorization.</li>
 		</ul>
