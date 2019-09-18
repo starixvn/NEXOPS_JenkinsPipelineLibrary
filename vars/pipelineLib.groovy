@@ -18,6 +18,12 @@ def xUnitForNetFramework(){
 	bat label: "Generate C# Coverage", script: "powershell -file \"%JENKINS_HOME%\\tools\\Commands\\xUnitCodeCoverage.ps1\" \"%WORKSPACE%\""
 }
 
+def nunit(){
+	def executor = load "%JENKINS_HOME%\\tools\\Commands\\test-coverage-standard.groovy"
+	
+	executor.ScriptExecutor.main("%WORKSPACE%")
+}
+
 def beginSonarQubeForMsBuild(String key, String name, String additionalParams){
 	bat label: "Prepare SonarQube", script: "\"${tool 'SonarScanner for MSBuild'}\\MSBuild.SonarQube.Runner.exe\" begin /k:${key} /n:\"${name}\" /v:\"%BRANCH_NAME% [%BUILD_NUMBER%]\" ${additionalParams}"
 }
