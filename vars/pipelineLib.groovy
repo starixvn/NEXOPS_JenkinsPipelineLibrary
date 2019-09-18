@@ -19,7 +19,7 @@ def xUnitForNetFramework(){
 }
 
 def nunit(){
-	def executor = new unit-test.nunit()
+	def executor = new unitTest.nunit()
 	
 	executor.nunit("${WORKSPACE}")
 }

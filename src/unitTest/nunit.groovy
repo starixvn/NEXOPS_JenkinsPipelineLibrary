@@ -1,4 +1,4 @@
-package unit-test
+package unitTest
 
 class TestCoverageRunner{
 	def rootPath;
