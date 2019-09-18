@@ -1,13 +1,13 @@
 package unitTest
 
-class TestCoverageRunner{
+class NUnitRunner implements Serializable{
 	def rootPath;
 	def nunitConsoleLocation;
 	def openCoverLocation;
 	def reportGeneratorLocation;
 	def openCoverToCoberturaConverterLocaltion;
 	
-    public TestCoverageRunner(def rootPath){
+    public NUnitRunner(def rootPath){
         this.rootPath = rootPath;
 		this.nunitConsoleLocation = "D:\\Jenkins\\tools\\NUnit\\nunit3-console.exe";		
 		this.openCoverLocation = "D:\\Jenkins\\tools\\opencover\\OpenCover.Console.exe";
@@ -109,11 +109,3 @@ class TestCoverageRunner{
 		println("Now is: " + (new Date())+". Finished to execute");
 	}	
 }
-
-def nunit(String workspace){
-	def runner = new TestCoverageRunner(workspace);
-	
-	runner.run();
-}
-
-return this

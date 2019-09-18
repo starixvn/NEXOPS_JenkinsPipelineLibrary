@@ -1,3 +1,5 @@
+import unitTest.NUnitRunner
+
 def restoreNuget(){
 	bat label: 'Restore nuget', script: "%JENKINS_HOME%\\tools\\commands\\nuget-restore.bat"
 }
@@ -19,9 +21,9 @@ def xUnitForNetFramework(){
 }
 
 def nunit(){
-	def executor = new unitTest.nunit()
+	def executor = new NUnitRunner("${WORKSPACE}")
 	
-	executor.nunit("${WORKSPACE}")
+	executor.run()
 }
 
 def beginSonarQubeForMsBuild(String key, String name, String additionalParams){
