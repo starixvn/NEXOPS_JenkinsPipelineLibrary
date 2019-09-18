@@ -21,7 +21,7 @@ def xUnitForNetFramework(){
 def nunit(){
 	def executor = load "${JENKINS_HOME}\\tools\\Commands\\test-coverage-standard.groovy"
 	
-	executor.ScriptExecutor.main("%WORKSPACE%")
+	executor.ScriptExecutor.main("${WORKSPACE}")
 }
 
 def beginSonarQubeForMsBuild(String key, String name, String additionalParams){
