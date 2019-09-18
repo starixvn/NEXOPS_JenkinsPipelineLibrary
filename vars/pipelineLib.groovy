@@ -19,7 +19,7 @@ def xUnitForNetFramework(){
 }
 
 def nunit(){
-	def executor = load "${JENKINS_HOME}\\tools\\Commands\\test-coverage-standard.groovy"
+	def executor = new unit-test.nunit()
 	
 	executor.nunit("${WORKSPACE}")
 }
