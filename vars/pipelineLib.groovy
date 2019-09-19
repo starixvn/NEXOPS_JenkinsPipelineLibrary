@@ -1,5 +1,3 @@
-import unitTest.NUnitRunner
-
 def restoreNuget(){
 	bat label: 'Restore nuget', script: "%JENKINS_HOME%\\tools\\commands\\nuget-restore.bat"
 }
@@ -21,9 +19,7 @@ def xUnitForNetFramework(){
 }
 
 def nunit(){
-	def executor = new NUnitRunner("${WORKSPACE}")
-	
-	executor.run()
+	bat label: "Generate C# Coverage", script: "powershell -file \"%JENKINS_HOME%\\tools\\Commands\\nunitCodeCoverage.ps1\" \"%WORKSPACE%\""
 }
 
 def beginSonarQubeForMsBuild(String key, String name, String additionalParams){
