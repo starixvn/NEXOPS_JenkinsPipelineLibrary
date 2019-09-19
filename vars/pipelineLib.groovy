@@ -23,11 +23,11 @@ def nunit(){
 }
 
 def beginSonarQubeForMsBuild(String key, String name, String additionalParams){
-	bat label: "Prepare SonarQube", script: "\"${tool 'SonarScanner for MSBuild'}\\MSBuild.SonarQube.Runner.exe\" begin /k:${key} /n:\"${name}\" /v:\"%BRANCH_NAME% [%BUILD_NUMBER%]\" ${additionalParams}"
+	bat label: "Prepare SonarQube", script: "\"${tool 'SonarScanner for MSBuild'}\\SonarScanner.MSBuild.exe\" begin /k:${key} /n:\"${name}\" /v:\"%BRANCH_NAME% [%BUILD_NUMBER%]\" ${additionalParams}"
 }
 
 def endSonarQubeForMsBuild(){
-	bat label: "Run SonarQube Analysis", script: "\"${tool 'SonarScanner for MSBuild'}\\MSBuild.SonarQube.Runner.exe\" end"
+	bat label: "Run SonarQube Analysis", script: "\"${tool 'SonarScanner for MSBuild'}\\SonarScanner.MSBuild.exe\" end"
 }
 
 def deployByRocketor(String locationIds, String branchName, String commitHash, String redmineIds, String userToken){
