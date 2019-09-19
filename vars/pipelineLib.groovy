@@ -41,3 +41,7 @@ def tsqlCoverage(String dataSource,String database){
 def generateSonarQubeReport(String key){
 	bat label:"SonarQube Report", script: "\"%JENKINS_HOME%\\tools\\SonarQube.ReportGenerator\\Fanex.SonarQube.ReportGenerator.exe\" --projectkey=${key} --workspace=\"%WORKSPACE%\""
 }
+
+def tsJest(String rootTestPath){
+	bat label: "Generate ts Coverage", script: "\"%JENKINS_HOME%\\tools\\Commands\\ts-jest-coverage.cmd\" \"${rootTestPath}\""
+}

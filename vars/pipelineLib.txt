@@ -25,4 +25,9 @@
 	</li>
 	<li><strong>tsqlCoverage(String dataSource,String database)</strong> : Generate TSQL coverage report for a SQL database.</li>
 	<li><strong>generateSonarQubeReport(String key)</strong> : Generate SonarQube report.</li>
+	<li><strong>tsJest(String rootTestPath)</strong> : Generate ts coverage report.
+		<ul>
+			<li>rootTestPath: the root test folder contains package.json config.</li>
+		</ul>
+	</li>
 </ul>
