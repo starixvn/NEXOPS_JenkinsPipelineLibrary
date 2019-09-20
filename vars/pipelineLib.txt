@@ -30,4 +30,9 @@
 			<li>rootTestPath: the root test folder contains package.json config.</li>
 		</ul>
 	</li>
+	<li><strong>jsJest(String rootTestPath)</strong> : Generate js coverage report.
+		<ul>
+			<li>rootTestPath: the root test folder contains package.json config.</li>
+		</ul>
+	</li>
 </ul>
