@@ -35,4 +35,9 @@
 			<li>rootTestPath: the root test folder contains package.json config.</li>
 		</ul>
 	</li>
+	<li><strong>tsAngularKarma(String rootTestPath)</strong> : Generate ts coverage report for projects using Angular + Karma.
+		<ul>
+			<li>rootTestPath: the root test folder contains package.json config.</li>
+		</ul>
+	</li>
 </ul>

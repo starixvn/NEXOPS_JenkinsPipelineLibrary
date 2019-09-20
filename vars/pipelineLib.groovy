@@ -49,3 +49,7 @@ def tsJest(String rootTestPath){
 def jsJest(String rootTestPath){
 	bat label: "Generate js Coverage", script: "\"%JENKINS_HOME%\\tools\\Commands\\js-jest-coverage.cmd\" \"${rootTestPath}\""
 }
+
+def tsAngularKarma(String rootTestPath){
+	bat label: "Generate ts Coverage", script: "\"%JENKINS_HOME%\\tools\\Commands\\ts-angular-coverage.cmd\" \"${rootTestPath}\""
+}
