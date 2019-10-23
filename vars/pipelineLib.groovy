@@ -7,7 +7,7 @@ def msBuild(String solutionName){
 }
 
 def msBuild16(String solutionName){
-	bat label: "MsBuild", script: "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe\" ${solutionName} /t:Rebuild /p:DebugType=Full /nologo /v:minimal"
+	bat label: "MsBuild", script: "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe\" ${solutionName} /t:Restore;Rebuild /p:DebugType=Full /nologo /v:minimal"
 }
 
 def xUnitForNetCore(){
