@@ -55,5 +55,5 @@ def tsAngularKarma(String rootTestPath){
 }
 
 def sonarScanner(){
-	bat label: "SonarQube Scanner", script: "\"${tool 'SonarQube Scanner'}\\bin\\sonar-scanner.bat\""
+	bat label: "SonarQube Scanner", script: "\"${tool 'SonarQube Scanner'}\\bin\\sonar-scanner.bat\" \"-Dsonar.projectVersion=%BRANCH_NAME% [%BUILD_NUMBER%]\""
 }
