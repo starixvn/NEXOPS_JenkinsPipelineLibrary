@@ -40,4 +40,5 @@
 			<li>rootTestPath: the root test folder contains package.json config.</li>
 		</ul>
 	</li>
+	<li><strong>sonarScanner()</strong> : Run SonarQube Scanner for projects without .csproj file.</li>
 </ul>

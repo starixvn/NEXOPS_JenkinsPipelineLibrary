@@ -53,3 +53,7 @@ def jsJest(String rootTestPath){
 def tsAngularKarma(String rootTestPath){
 	bat label: "Generate ts Coverage", script: "\"%JENKINS_HOME%\\tools\\Commands\\ts-angular-coverage.cmd\" \"${rootTestPath}\""
 }
+
+def sonarScanner(){
+	bat label: "SonarQube Scanner", script: "\"${tool 'SonarQube Scanner'}\\bin\\sonar-scanner.bat\""
+}
