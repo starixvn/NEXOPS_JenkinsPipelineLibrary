@@ -18,6 +18,10 @@ def xUnitForNetFramework(){
 	bat label: "Generate C# Coverage", script: "powershell -file \"%JENKINS_HOME%\\tools\\Commands\\xUnitCodeCoverage.ps1\" \"%WORKSPACE%\""
 }
 
+def xUnitForNetFrameworkx86(){
+	bat label: "Generate C# Coverage", script: "powershell -file \"%JENKINS_HOME%\\tools\\Commands\\xUnitCodeCoverage.ps1\" \"%WORKSPACE%\" x86"
+}
+
 def nunit(){
 	bat label: "Generate C# Coverage", script: "powershell -file \"%JENKINS_HOME%\\tools\\Commands\\nunitCodeCoverage.ps1\" \"%WORKSPACE%\""
 }
