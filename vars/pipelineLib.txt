@@ -4,6 +4,7 @@
 	<li><strong>restoreNuget()</strong> : Restore nuget packages.</li>
 	<li><strong>msBuild(String solutionName)</strong> : Call MsBuild to build the solution.</li>
 	<li><strong>msBuild16(String solutionName)</strong> : Call MsBuild 16 to build the solution.</li>
+    <li><strong>xUnitForNet5()</strong> : Generate C# coverage report for .Net 5 projects using xUnit testing framework.</li>
 	<li><strong>xUnitForNetCore()</strong> : Generate C# coverage report for .Net Core projects using xUnit testing framework.</li>
 	<li><strong>xUnitForNetFramework()</strong> : Generate C# coverage report for .Net framework projects using xUnit testing framework.</li>
 	<li><strong>xUnitForNetFrameworkx86()</strong> : Generate C# coverage report for x86 .Net framework projects using xUnit testing framework.</li>

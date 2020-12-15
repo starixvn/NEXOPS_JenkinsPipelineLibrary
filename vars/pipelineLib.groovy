@@ -10,6 +10,10 @@ def msBuild16(String solutionName){
 	bat label: "MsBuild", script: "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe\" ${solutionName} /t:Restore;Rebuild /p:DebugType=Full /nologo /v:minimal"
 }
 
+def xUnitForNet5(){
+	bat label: "Generate C# Coverage", script: "powershell -file \"%JENKINS_HOME%\\tools\\Commands\\Net5Coverage.ps1\" \"%WORKSPACE%\""
+}
+
 def xUnitForNetCore(){
 	bat label: "Generate C# Coverage", script: "powershell -file \"%JENKINS_HOME%\\tools\\Commands\\NetCoreCoverage.ps1\" \"%WORKSPACE%\""
 }
