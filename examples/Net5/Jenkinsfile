@@ -16,9 +16,9 @@ pipeline {
     stage('Build') {
       steps {        
         script{
-          pipelineLib.beginSonarQubeForMsBuild("Nap-OWP-NetCore", "Olympus / Nap OWP Net Core", "/d:sonar.cs.opencover.reportsPaths=%WORKSPACE%\\CoverageReports\\*.xml /d:sonar.cs.vstest.reportsPaths=%WORKSPACE%\\TestResults\\*.trx")
+          pipelineLib.beginSonarQubeForMsBuild("SonarProjectKey", "Team Name / Sonar Project Name", "/d:sonar.cs.opencover.reportsPaths=%WORKSPACE%\\CoverageReports\\*.xml /d:sonar.cs.vstest.reportsPaths=%WORKSPACE%\\TestResults\\*.trx")
 
-          pipelineLib.msBuild16("operation-working-page-netcore.sln")
+          pipelineLib.msBuild16("solution.sln")
         }
       }
     }
@@ -47,7 +47,7 @@ pipeline {
         always{
           script{
             if(manager.logContains(".*Quality gate status.*")){              
-              pipelineLib.generateSonarQubeReport("Nap-OWP-NetCore")
+              pipelineLib.generateSonarQubeReport("SonarProjectKey")
             }
           }
         }
