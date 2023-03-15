@@ -54,8 +54,13 @@ def tsJest(String rootTestPath){
 	bat label: "Generate ts Coverage", script: "\"%JENKINS_HOME%\\tools\\Commands\\ts-jest-coverage.cmd\" \"${rootTestPath}\""
 }
 
-def jsJest(String rootTestPath){
-	bat label: "Generate js Coverage", script: "\"%JENKINS_HOME%\\tools\\Commands\\js-jest-coverage.cmd\" \"${rootTestPath}\""
+def jsJest(String rootTestPath,Boolean npmNoOptional = false){
+	def npmParam = ""
+	if (npmNoOptional){
+		npmParam = "--no-optional"
+	}
+
+	bat label: "Generate js Coverage", script: "\"%JENKINS_HOME%\\tools\\Commands\\js-jest-coverage.cmd\" \"${rootTestPath}\" ${npmParam}"
 }
 
 def tsAngularKarma(String rootTestPath){
